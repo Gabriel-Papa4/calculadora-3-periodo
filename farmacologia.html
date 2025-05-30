@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FARMACOLOGIA I - Calculadora de Notas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Calculadora de Notas</h1>
+            <h2>3° Período</h2>
+        </div>
+    </header>
+
+    <main class="container">
+        <br>
+        <a href="calculadora-hub.html" class="voltar">← Voltar para página inicial</a>
+
+
+    
+        <div class="calculadora">
+            <h2>FARMACOLOGIA I</h2>
+
+            <form id="calculadora-form">
+                <div class="grade-input-section">
+                    <div class="grade-input-group main-grade p1-toggle-header" data-target-details="p1ComponentsDetailsFarmacologia">
+                        <label for="p1-completa">P1 (10 pontos):</label>
+                        <input type="number" id="p1-completa" min="0" max="10" step="0.01" placeholder="Digite a nota da P1">
+                        <span class="p1-components-label-action">CALCULAR P1 POR COMPONENTES</span>
+                        <button type="button" class="expand-arrow-button">
+                            <span class="arrow-icon">▼</span>
+                        </button>
+                    </div>
+                    <div class="p1-components-details" id="p1ComponentsDetailsFarmacologia" style="display: none;">
+                        <div class="form-group">
+                            <label for="p1-aval-escrita">
+                                <span>AVALIAÇÃO ESCRITA P1</span>
+                                <span class="points-label">(8 pontos) - peso 5</span>
+                            </label>
+                            <input type="number" id="p1-aval-escrita" min="0" max="8" step="0.01" placeholder="Digite a nota da avaliação escrita">
+                        </div>
+                        <div class="form-group">
+                            <label for="p1-media-eds-sna-final">
+                                <span>MÉDIA DOS EDs DE SNA BNMs</span>
+                                <span class="points-label">(2 pontos) - peso 5</span>
+                            </label>
+                            <input type="number" id="p1-media-eds-sna-final" min="0" max="2" step="0.01" placeholder="Digite a nota da média dos EDs de SNA BNMs">
+                        </div>
+                        <div class="sub-component-group">
+                            <p class="sub-component-title">Ou calcule a Média dos EDs de SNA BNMs:</p>
+                            <div class="form-group">
+                                <label for="p1-ed-sna1">
+                                    <span>ESTUDO DIRIGIDO SNA</span>
+                                    <span class="points-label">(10 pontos)</span>
+                                </label>
+                                <input type="number" id="p1-ed-sna1" min="0" max="10" step="0.01" placeholder="Digite a nota do estudo dirigido de SNA">
+                            </div>
+                            <div class="form-group">
+                                <label for="p1-ed-sna2">
+                                    <span>ESTUDO DIRIGIDO BNMs</span>
+                                    <span class="points-label">(10 pontos)</span>
+                                </label>
+                                <input type="number" id="p1-ed-sna2" min="0" max="10" step="0.01" placeholder="Digite a nota do estudo dirigido de BNMs">
+                            </div>
+                            </div>
+                        <div class="form-group">
+                            <label for="p1-ed-laxantes">
+                                <span>ED LAXANTES/ANTIDIURÉTICOS</span>
+                                <span class="points-label">(10 pontos) - peso 2</span>
+                            </label>
+                            <input type="number" id="p1-ed-laxantes" min="0" max="10" step="0.01" placeholder="Digite a nota do ED Laxantes/Antidiuréticos">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grade-input-section">
+                    <div class="grade-input-group main-grade p2-toggle-header" data-target-details="p2ComponentsDetailsFarmacologiaP2">
+                        <label for="p2-completa">P2 (10 pontos):</label>
+                        <input type="number" id="p2-completa" min="0" max="10" step="0.01" placeholder="Digite a nota da P2">
+                        <span class="p2-components-label-action">CALCULAR P2 POR COMPONENTES</span>
+                        <button type="button" class="expand-arrow-button">
+                            <span class="arrow-icon">▼</span>
+                        </button>
+                    </div>
+                    <div class="p2-components-details" id="p2ComponentsDetailsFarmacologiaP2" style="display: none;">
+                        <div class="form-group">
+                           <label for="p2-avaliacao">
+                           <span>AVALIAÇÃO ESCRITA P2</span>
+                           <span class="points-label">(10 pontos) - peso 5</span>
+                           </label>
+                            <input type="number" id="p2-avaliacao" min="0" max="10" step="0.01" placeholder="Digite a nota da avaliação escrita">
+                        </div>
+                        <div class="form-group">
+                            <label for="p2-outras-final">
+                                <span>MÉDIA DE OUTRAS ATIVIDADES P2</span>
+                                <span class="points-label">(10 pontos) - peso 1</span>
+                            </label>
+                            <input type="number" id="p2-outras-final" min="0" max="10" step="0.01" placeholder="Digite a nota da média de outras atividades">
+                        </div>
+                        <div class="sub-component-group">
+                            <p class="sub-component-title">Ou calcule a Média de Outras Atividades P2:</p>
+                            <div class="form-group">
+                                <label for="p2-seminario">
+                                    <span>SEMINÁRIO P2</span>
+                                    <span class="points-label">(10 pontos)</span>
+                                </label>
+                                <input type="number" id="p2-seminario" min="0" max="10" step="0.01" placeholder="Digite a nota do seminário">
+                            </div>
+                            <div class="form-group">
+                                <label for="p2-estudo1">
+                                    <span>ESTUDO DIRIGIDO 1 P2</span>
+                                    <span class="points-label">(10 pontos)</span>
+                                </label>
+                                <input type="number" id="p2-estudo1" min="0" max="10" step="0.01" placeholder="Digite a nota do estudo dirigido 1">
+                            </div>
+                            <div class="form-group">
+                                <label for="p2-estudo2">
+                                    <span>ESTUDO DIRIGIDO 2 P2</span>
+                                    <span class="points-label">(10 pontos)</span>
+                                </label>
+                                <input type="number" id="p2-estudo2" min="0" max="10" step="0.01" placeholder="Digite a nota do estudo dirigido 2">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="p2-eportfolio">
+                                <span>E-PORTIFÓLIO P2</span>
+                                <span class="points-label">(10 pontos) - peso 1</span>
+                            </label>
+                            <input type="number" id="p2-eportfolio" min="0" max="10" step="0.01" placeholder="Digite a nota do E-Portfólio">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grade-input-section">
+                    <div class="grade-input-group main-grade">
+                        <label for="p3">P3 - Atividade Integradora (10 pontos):</label>
+                        <input type="number" id="p3" min="0" max="10" step="0.01" placeholder="Digite a nota da P3">
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <button type="button" id="calcular" class="btn-calcular">Calcular</button>
+                    <button type="button" id="limpar" class="btn-limpar">Limpar</button>
+                </div>
+            </form>
+
+            <div id="resultado" class="resultado" style="display: none;">
+                <h3>Resultado:</h3>
+                <div id="media-final" style="display: none;" class="media-final-wrapper">
+                    <p>Sua média final é: <strong id="nota-final">0.00</strong></p>
+                    <p id="mensagem"></p>
+                </div>
+                <div id="notas-necessarias"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Autoria de Gabriel Papa</p>
+        </div>
+    </footer>
+
+   <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const calcularBtn = document.getElementById('calcular');
+            const limparBtn = document.getElementById('limpar');
+            if (calcularBtn) calcularBtn.addEventListener('click', calcularNota);
+            if (limparBtn) limparBtn.addEventListener('click', () => limparCampos(document.getElementById('calculadora-form')));
+        });
+
+        function gerarHtmlNotasComponentesFarmacologia(
+            targetPxFinal,
+            pxTotalDivisor,
+            componentsConfig,
+            pxLabel
+        ) {
+            // Change 1: Bold the header
+            let html = `<li><strong>--- Para ${pxLabel} atingir ${formatarNota(targetPxFinal)} ---</strong></li>`;
+
+            let currentWeightedSumOfPxComponents = 0;
+            const missingComponents = [];
+
+            componentsConfig.forEach(comp => {
+                if (comp.value !== null && !isNaN(comp.value)) {
+                    currentWeightedSumOfPxComponents += comp.value * comp.weight;
+                } else {
+                    missingComponents.push(comp);
+                }
+            });
+
+            const neededRemainingWeightedSumForPxComponents = targetPxFinal * pxTotalDivisor - currentWeightedSumOfPxComponents;
+
+            if (missingComponents.length === 0) {
+                return html; 
+            }
+
+            let maxPossibleWeightedSumFromMissingPxComponents = 0;
+            missingComponents.forEach(comp => {
+                maxPossibleWeightedSumFromMissingPxComponents += comp.max * comp.weight;
+            });
+
+            if (neededRemainingWeightedSumForPxComponents <= 0.005 * pxTotalDivisor) {
+                missingComponents.forEach(comp => {
+                    html += `<li>${comp.name}: <strong>${formatarNota(0)}</strong> (de ${comp.max})</li>`;
+                    if (comp.isSubGroup && comp.subComponentsData && comp.currentStr === '') {
+                         comp.subComponentsData.subs.forEach(sub => {
+                            if (sub.currentStr === '') {
+                                html += `<li>  - ${sub.name}: <strong>${formatarNota(0)}</strong> (de ${sub.max})</li>`;
+                            }
+                        });
+                    }
+                });
+                return html;
+            }
+
+            if (neededRemainingWeightedSumForPxComponents > maxPossibleWeightedSumFromMissingPxComponents + (0.005 * pxTotalDivisor) ) {
+                missingComponents.forEach(comp => {
+                    html += `<li>${comp.name}: <strong>${formatarNota(comp.max)}</strong> (de ${comp.max}) (Insuficiente para Px atingir ${formatarNota(targetPxFinal)})</li>`;
+                    if (comp.isSubGroup && comp.subComponentsData && comp.currentStr === '') {
+                        comp.subComponentsData.subs.forEach(sub => {
+                            if (sub.currentStr === '') {
+                                html += `<li>  - ${sub.name}: <strong>${formatarNota(sub.max)}</strong> (de ${sub.max})</li>`;
+                            }
+                        });
+                    }
+                });
+                return html;
+            }
+
+            missingComponents.forEach(comp => {
+                let neededScoreForComp;
+                if (maxPossibleWeightedSumFromMissingPxComponents > 0) {
+                    neededScoreForComp = ( (comp.max * comp.weight) / maxPossibleWeightedSumFromMissingPxComponents ) * neededRemainingWeightedSumForPxComponents / comp.weight;
+                } else { 
+                    neededScoreForComp = comp.max;
+                }
+
+                neededScoreForComp = Math.max(0, Math.min(comp.max, neededScoreForComp));
+                html += `<li>${comp.name}: <strong>${formatarNota(neededScoreForComp)}</strong> (de ${comp.max})</li>`;
+
+                if (comp.isSubGroup && comp.subComponentsData && comp.currentStr === '') { 
+                    const targetMainCompValFromSubs = neededScoreForComp; 
+                    const targetSumForSubs = targetMainCompValFromSubs * comp.subComponentsData.targetSubValueMultiplier;
+
+                    const subs = comp.subComponentsData.subs;
+                    const missingSubsFromGroup = [];
+                    let currentSumOfFilledSubs = 0;
+                    let maxPossibleSumFromMissingSubs = 0;
+
+                    subs.forEach(subComp => {
+                        const subVal = subComp.currentStr !== '' ? parseFloat(subComp.currentStr) : null;
+                        if (subVal !== null && !isNaN(subVal)) {
+                            currentSumOfFilledSubs += subVal;
+                        } else {
+                            missingSubsFromGroup.push(subComp);
+                            maxPossibleSumFromMissingSubs += subComp.max;
+                        }
+                    });
+
+                    const neededRemainingSumForSubs = targetSumForSubs - currentSumOfFilledSubs;
+
+                    if (missingSubsFromGroup.length > 0) {
+                        if (neededRemainingSumForSubs <= 0) { 
+                            missingSubsFromGroup.forEach(ms => html += `<li>  - ${ms.name}: <strong>${formatarNota(0)}</strong> (de ${ms.max})</li>`);
+                        } else if (neededRemainingSumForSubs > maxPossibleSumFromMissingSubs + 0.005) { 
+                            missingSubsFromGroup.forEach(ms => html += `<li>  - ${ms.name}: <strong>${formatarNota(ms.max)}</strong> (de ${ms.max}) (Insuficiente!)</li>`);
+                        } else { 
+                            missingSubsFromGroup.forEach(ms => {
+                                let neededSubScore;
+                                if (maxPossibleSumFromMissingSubs > 0) {
+                                    neededSubScore = (ms.max / maxPossibleSumFromMissingSubs) * neededRemainingSumForSubs;
+                                } else {
+                                    neededSubScore = ms.max;
+                                }
+                                neededSubScore = Math.max(0, Math.min(ms.max, neededSubScore));
+                                html += `<li>  - ${ms.name}: <strong>${formatarNota(neededSubScore)}</strong> (de ${ms.max})</li>`;
+                            });
+                        }
+                    }
+                }
+            });
+            return html;
+        }
+
+
+        function calcularNota() {
+            // --- P1 Inputs ---
+            const p1CompletaStr = document.getElementById('p1-completa').value;
+            const p1AvalEscritaStr = document.getElementById('p1-aval-escrita').value;
+            const p1MediaEdsSnaFinalStr = document.getElementById('p1-media-eds-sna-final').value;
+            const p1EdSna1Str = document.getElementById('p1-ed-sna1').value;
+            const p1EdSna2Str = document.getElementById('p1-ed-sna2').value;
+            const p1EdLaxantesStr = document.getElementById('p1-ed-laxantes').value;
+
+            // --- P2 Inputs ---
+            const p2CompletaStr = document.getElementById('p2-completa').value;
+            const p2AvalStr = document.getElementById('p2-avaliacao').value;
+            const p2OutrasFinalStr = document.getElementById('p2-outras-final').value;
+            const p2SemStr = document.getElementById('p2-seminario').value;
+            const p2Estudo1Str = document.getElementById('p2-estudo1').value;
+            const p2Estudo2Str = document.getElementById('p2-estudo2').value;
+            const p2EportfolioStr = document.getElementById('p2-eportfolio').value;
+            const p3Str = document.getElementById('p3').value;
+
+            let valP1AvalEscrita = p1AvalEscritaStr !== '' ? parseFloat(p1AvalEscritaStr) : null;
+            let valP1MediaEdsSna = null;
+            if (p1MediaEdsSnaFinalStr !== '') {
+                valP1MediaEdsSna = parseFloat(p1MediaEdsSnaFinalStr);
+            } else if (p1EdSna1Str !== '' && p1EdSna2Str !== '') {
+                const mediaEds = (parseFloat(p1EdSna1Str) + parseFloat(p1EdSna2Str)) / 2;
+                valP1MediaEdsSna = Math.min(2, (mediaEds / 10) * 2);
+            }
+            let valP1EdLaxantes = p1EdLaxantesStr !== '' ? parseFloat(p1EdLaxantesStr) : null;
+
+            let p1 = null;
+            if (p1CompletaStr !== '') {
+                p1 = parseFloat(p1CompletaStr);
+            } else if (valP1AvalEscrita !== null && valP1MediaEdsSna !== null && valP1EdLaxantes !== null) {
+                 p1 = ((valP1AvalEscrita * 5) + (valP1MediaEdsSna * 5) + (valP1EdLaxantes * 2)) / 7;
+            }
+
+
+            let valP2Aval = p2AvalStr !== '' ? parseFloat(p2AvalStr) : null;
+            let valP2Outras = null;
+            if (p2OutrasFinalStr !== '') {
+                valP2Outras = parseFloat(p2OutrasFinalStr);
+            } else if (p2SemStr !== '' && p2Estudo1Str !== '' && p2Estudo2Str !== '') {
+                valP2Outras = (parseFloat(p2SemStr) + parseFloat(p2Estudo1Str) + parseFloat(p2Estudo2Str)) / 3;
+            }
+            let valP2Eportfolio = p2EportfolioStr !== '' ? parseFloat(p2EportfolioStr) : null;
+
+            let p2 = null;
+            if (p2CompletaStr !== '') {
+                p2 = parseFloat(p2CompletaStr);
+            } else if (valP2Aval !== null && valP2Outras !== null && valP2Eportfolio !== null) {
+                p2 = ((valP2Aval * 5) + (valP2Outras * 1) + (valP2Eportfolio * 1)) / 7;
+            }
+            let p3 = p3Str !== '' ? parseFloat(p3Str) : null;
+
+            const notasNecessariasDiv = document.getElementById('notas-necessarias');
+            const mediaFinalDiv = document.getElementById('media-final');
+            const notaFinalEl = document.getElementById('nota-final');
+            const mensagemEl = document.getElementById('mensagem');
+            const resultadoDiv = document.getElementById('resultado');
+
+            notasNecessariasDiv.innerHTML = '';
+            mediaFinalDiv.style.display = 'none';
+            mediaFinalDiv.classList.remove('aprovado', 'recuperacao', 'reprovado');
+            mensagemEl.className = '';
+            notaFinalEl.textContent = '0.00';
+            const linkPfWrapper = mediaFinalDiv.querySelector('.link-pf-wrapper');
+            if (linkPfWrapper) linkPfWrapper.remove();
+
+            const PASSING_GRADE = 7;
+            const P1_WEIGHT = 5, P2_WEIGHT = 5, P3_WEIGHT = 1;
+            const TOTAL_SEMESTER_WEIGHT = P1_WEIGHT + P2_WEIGHT + P3_WEIGHT; 
+
+            if (p1 !== null && !isNaN(p1) && p2 !== null && !isNaN(p2) && p3 !== null && !isNaN(p3)) {
+                const mediaFinalValor = ((p1 * P1_WEIGHT) + (p2 * P2_WEIGHT) + (p3 * P3_WEIGHT)) / TOTAL_SEMESTER_WEIGHT;
+                notaFinalEl.textContent = formatarNota(mediaFinalValor);
+                mensagemEl.textContent = obterMensagem(mediaFinalValor);
+
+                if (mediaFinalValor >= PASSING_GRADE) {
+                    mediaFinalDiv.classList.add('aprovado');
+                    mensagemEl.classList.add('aprovado-msg');
+                } else if (mediaFinalValor >= 3) {
+                    mediaFinalDiv.classList.add('recuperacao');
+                    mensagemEl.classList.add('recuperacao-msg');
+                    let linkPfWrapperLocal = mediaFinalDiv.querySelector('.link-pf-wrapper');
+                    if (!linkPfWrapperLocal) {
+                        linkPfWrapperLocal = document.createElement('p');
+                        linkPfWrapperLocal.className = 'link-pf-wrapper';
+                        linkPfWrapperLocal.innerHTML = `<a href="prova-final.html" class="btn-calcular btn-calcular-pf" style="display: inline-block; margin-top: 10px; text-decoration: none; text-align: center;">Cálculo da Prova Final</a>`;
+                        mediaFinalDiv.appendChild(linkPfWrapperLocal);
+                    }
+                } else {
+                    mediaFinalDiv.classList.add('reprovado');
+                    mensagemEl.classList.add('reprovado-msg');
+                }
+                mediaFinalDiv.style.display = 'block';
+                notasNecessariasDiv.style.display = 'none';
+            } else {
+                let pontosAtuaisPonderados = 0;
+                if (p1 !== null && !isNaN(p1)) pontosAtuaisPonderados += p1 * P1_WEIGHT;
+                if (p2 !== null && !isNaN(p2)) pontosAtuaisPonderados += p2 * P2_WEIGHT;
+                if (p3 !== null && !isNaN(p3)) pontosAtuaisPonderados += p3 * P3_WEIGHT;
+
+                if (verificarAprovacaoAutomaticaComNotasAtuais(p1, p2, p3)) {
+                     mediaFinalDiv.style.display = 'block';
+                     mediaFinalDiv.classList.add('aprovado');
+                     notaFinalEl.textContent = '';
+                     mensagemEl.textContent = 'Parabéns, você já passou!';
+                     mensagemEl.classList.add('aprovado-msg');
+                     notasNecessariasDiv.innerHTML = '';
+                     notasNecessariasDiv.style.display = 'none';
+                     resultadoDiv.style.display = 'block';
+                     return;
+                }
+
+                mediaFinalDiv.style.display = 'none';
+                notasNecessariasDiv.style.display = 'block';
+                let htmlNotasNecessarias = '<h4>Notas necessárias para média 7:</h4><ul>';
+                const notasAlvoParaPx = {};
+
+                let pesoTotalDasPxFaltantes = 0;
+                if (p1 === null || isNaN(p1)) pesoTotalDasPxFaltantes += P1_WEIGHT;
+                if (p2 === null || isNaN(p2)) pesoTotalDasPxFaltantes += P2_WEIGHT;
+                if (p3 === null || isNaN(p3)) pesoTotalDasPxFaltantes += P3_WEIGHT;
+
+                let pontosFaltantesParaMedia7 = (PASSING_GRADE * TOTAL_SEMESTER_WEIGHT) - pontosAtuaisPonderados;
+
+                let notaNecessariaGeral = 10; 
+                if (pesoTotalDasPxFaltantes > 0) {
+                    notaNecessariaGeral = pontosFaltantesParaMedia7 / pesoTotalDasPxFaltantes;
+                }
+
+                let isPossibleToReach7 = true;
+                if (notaNecessariaGeral > 10.005 && pesoTotalDasPxFaltantes > 0) {
+                    isPossibleToReach7 = false;
+                }
+                 notaNecessariaGeral = Math.max(0, Math.min(10, notaNecessariaGeral));
+
+
+                if (p1 === null || isNaN(p1)) notasAlvoParaPx['P1'] = notaNecessariaGeral;
+                if (p2 === null || isNaN(p2)) notasAlvoParaPx['P2'] = notaNecessariaGeral;
+                if (p3 === null || isNaN(p3)) notasAlvoParaPx['P3'] = notaNecessariaGeral;
+
+                if (!isPossibleToReach7) {
+                    htmlNotasNecessarias += `<li>Com as notas atuais, não é possível atingir média 7 (precisaria de mais de 10 nas avaliações restantes).</li>`;
+                } else if (pontosFaltantesParaMedia7 <= 0 && pesoTotalDasPxFaltantes > 0) {
+                     htmlNotasNecessarias += `<li>Com as notas atuais, você já atingiu ou ultrapassou a média 7. Preencha os campos restantes com 0 se desejar.</li>`;
+                     if (p1 === null || isNaN(p1)) notasAlvoParaPx['P1'] = 0;
+                     if (p2 === null || isNaN(p2)) notasAlvoParaPx['P2'] = 0;
+                     if (p3 === null || isNaN(p3)) notasAlvoParaPx['P3'] = 0;
+                }
+
+
+                if (p1 === null || isNaN(p1)) htmlNotasNecessarias += `<li>P1 (geral): <strong>${formatarNota(notasAlvoParaPx['P1'])}</strong> </li>`;
+                if (p2 === null || isNaN(p2)) htmlNotasNecessarias += `<li>P2 (geral): <strong>${formatarNota(notasAlvoParaPx['P2'])}</strong> </li>`;
+                if (p3 === null || isNaN(p3)) htmlNotasNecessarias += `<li>P3 (geral): <strong>${formatarNota(notasAlvoParaPx['P3'])}</strong></li>`;
+
+                if (p1CompletaStr === '') {
+                    let targetP1Final = notasAlvoParaPx['P1'] !== undefined ? notasAlvoParaPx['P1'] : (isPossibleToReach7 ? 7 : 10);
+                    const p1ComponentsConfig = [
+                        { name: 'Avaliação Escrita P1', id: 'p1-aval-escrita', value: valP1AvalEscrita, currentStr: p1AvalEscritaStr, max: 8, weight: 5 },
+                        { name: 'Média dos EDs de SNA BNMs', id: 'p1-media-eds-sna-final', value: valP1MediaEdsSna, currentStr: p1MediaEdsSnaFinalStr, max: 2, weight: 5, isSubGroup: true,
+                          subComponentsData: {
+                            targetSubValueMultiplier: 10, 
+                            subs: [
+                                { name: 'Estudo Dirigido SNA', id: 'p1-ed-sna1', currentStr: p1EdSna1Str, max: 10 },
+                                { name: 'Estudo Dirigido BNMs', id: 'p1-ed-sna2', currentStr: p1EdSna2Str, max: 10 }
+                            ]
+                          }
+                        },
+                        { name: 'ED Laxantes/Antidiuréticos', id: 'p1-ed-laxantes', value: valP1EdLaxantes, currentStr: p1EdLaxantesStr, max: 10, weight: 2 }
+                    ];
+                    htmlNotasNecessarias += gerarHtmlNotasComponentesFarmacologia(targetP1Final, 7, p1ComponentsConfig, 'P1');
+                }
+
+                if (p2CompletaStr === '') {
+                    let targetP2Final = notasAlvoParaPx['P2'] !== undefined ? notasAlvoParaPx['P2'] : (isPossibleToReach7 ? 7 : 10);
+                    const p2ComponentsConfig = [
+                        { name: 'Avaliação Escrita P2', id: 'p2-avaliacao', value: valP2Aval, currentStr: p2AvalStr, max: 10, weight: 5 },
+                        { name: 'Média de Outras Atividades P2', id: 'p2-outras-final', value: valP2Outras, currentStr: p2OutrasFinalStr, max: 10, weight: 1, isSubGroup: true,
+                          subComponentsData: {
+                            targetSubValueMultiplier: 3,
+                            subs: [
+                                { name: 'Seminário P2', id: 'p2-seminario', currentStr: p2SemStr, max: 10 },
+                                { name: 'Estudo Dirigido 1 P2', id: 'p2-estudo1', currentStr: p2Estudo1Str, max: 10 },
+                                { name: 'Estudo Dirigido 2 P2', id: 'p2-estudo2', currentStr: p2Estudo2Str, max: 10 }
+                            ]
+                          }
+                        },
+                        { name: 'E-Portfólio P2', id: 'p2-eportfolio', value: valP2Eportfolio, currentStr: p2EportfolioStr, max: 10, weight: 1 }
+                    ];
+                    htmlNotasNecessarias += gerarHtmlNotasComponentesFarmacologia(targetP2Final, 7, p2ComponentsConfig, 'P2');
+                }
+
+                htmlNotasNecessarias += '</ul>';
+                notasNecessariasDiv.innerHTML = htmlNotasNecessarias;
+            }
+            resultadoDiv.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
